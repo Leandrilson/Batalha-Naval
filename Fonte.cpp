@@ -249,6 +249,9 @@ int main()
 	if (option == 'I')
 	{
 		cout << "===============================================================" << endl;
+		cout << "  O inimigo tem cinco navios, um porta aviões de tamanho 5, um" << endl;
+		cout << "cruzador de tamanho 4, um destróier de tamanho 3, uma fragata" << endl;
+		cout << "de tamanho 3 e um submarino de tamanho 2." << endl;
 		cout << "  Para inserir corretamente a coordenada do ataque, insira uma" << endl;
 		cout << "letra maiúscula seguida de um espaço eu um número." << endl;
 		cout << "  No mapa, acertos em navios inimigos serão marcados com um" << endl;
