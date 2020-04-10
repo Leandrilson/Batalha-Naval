@@ -68,7 +68,7 @@ public:
 	}
 };
 
-//Funções relacionadas ao posicionamento de navios
+//FunÃ§Ãµes relacionadas ao posicionamento de navios
 
 bool Valida(int x, int y)
 {
@@ -168,7 +168,7 @@ void PrintNavios()
 	}
 }
 
-//Funções relacionadas ao funcionamento do jogo
+//FunÃ§Ãµes relacionadas ao funcionamento do jogo
 
 int Ataque()
 {
@@ -181,13 +181,13 @@ int Ataque()
 
 	if (x < 1 || x > 10 || y < 1 || y > 10)
 	{
-		cout << "Input inválido." << endl;
+		cout << "Input invÃ¡lido." << endl;
 		return Ataque();
 	}
 
 	if (Campo[x - 1][y - 1] != ' ')
 	{
-		cout << "Você já atingiu essa coordenada." << endl;
+		cout << "VocÃª jÃ¡ atingiu essa coordenada." << endl;
 		return Ataque();
 	}
 
@@ -205,7 +205,7 @@ int Ataque()
 	return resultado;
 }
 
-//Função relacionadas a desenhar o campo
+//FunÃ§Ã£o relacionadas a desenhar o campo
 
 void PrintCampo()
 {
@@ -240,9 +240,9 @@ int main()
 	std::locale::global(std::locale(""));
 	//Intro
 	cout << "===============================================================" << endl;
-	cout << "BATALHA NAVAL SUPER INCRÍVEL DO LEANDRILSON" << endl;
+	cout << "BATALHA NAVAL SUPER INCRÃVEL DO LEANDRILSON" << endl;
 	cout << "===============================================================" << endl;
-	cout << "Insira 'I' para ler as instruções, e 'J' para começar o jogo." << endl;
+	cout << "Insira 'I' para ler as instruÃ§Ãµes, e 'J' para comeÃ§ar o jogo." << endl;
 
 	char option;
 	cin >> option;
@@ -250,15 +250,15 @@ int main()
 	{
 		cout << "===============================================================" << endl;
 		cout << "  Para inserir corretamente a coordenada do ataque, insira uma" << endl;
-		cout << "letra maiúscula seguida de um espaço eu um número." << endl;
-		cout << "  No mapa, acertos em navios inimigos serão marcados com um" << endl;
-		cout << "'X', e acertos em água com um 'O'." << endl;
-		cout << "  Você tem 60 tiros para afundar os cinco navios inimigos." << endl;
-		cout << "  Preste atenção nas informações exibidas na tela, elas te" << endl;
-		cout << "dirão quando um navio inimigo foi naufragado." << endl;
+		cout << "letra maiÃºscula seguida de um espaÃ§o eu um nÃºmero." << endl;
+		cout << "  No mapa, acertos em navios inimigos serÃ£o marcados com um" << endl;
+		cout << "'X', e acertos em Ã¡gua com um 'O'." << endl;
+		cout << "  VocÃª tem 60 tiros para afundar os cinco navios inimigos." << endl;
+		cout << "  Preste atenÃ§Ã£o nas informaÃ§Ãµes exibidas na tela, elas te" << endl;
+		cout << "dirÃ£o quando um navio inimigo foi naufragado." << endl;
 		cout << "===============================================================" << endl;
 
-		cout << "Insira 'J' para começar o jogo." << endl;
+		cout << "Insira 'J' para comeÃ§ar o jogo." << endl;
 		cin >> option;
 	}
 
@@ -296,7 +296,7 @@ int main()
 
 	//Game Loop
 	bool GameOver = false;
-	int event = 0; //1=água, 2=acerto, 3-7=navios naufragados, 8=vitória, 9=derrota
+	int event = 0; //1=Ã¡gua, 2=acerto, 3-7=navios naufragados, 8=vitÃ³ria, 9=derrota
 	int navios_restantes = 5;
 	int resultado;
 	int tiros = 60;
@@ -306,7 +306,7 @@ int main()
 		system("CLS");
 		PrintCampo();
 
-		//Informações
+		//InformaÃ§Ãµes
 
 		if (event != 0)
 		{
@@ -314,54 +314,54 @@ int main()
 			switch (event)
 			{
 			case 1:
-				cout << "Água!" << endl;
+				cout << "Ãgua!" << endl;
 				break;
 			case 2:
-				cout << "Você acertou um navio inimigo!" << endl;
+				cout << "VocÃª acertou um navio inimigo!" << endl;
 				break;
 			case 3:
-				cout << "Você naufragou o submarino inimigo!" << endl;
+				cout << "VocÃª naufragou o submarino inimigo!" << endl;
 				break;
 			case 4:
-				cout << "Você naufragou o destróier inimigo!" << endl;
+				cout << "VocÃª naufragou o destrÃ³ier inimigo!" << endl;
 				break;
 			case 5:
-				cout << "Você naufragou a fragata inimiga!" << endl;
+				cout << "VocÃª naufragou a fragata inimiga!" << endl;
 				break;
 			case 6:
-				cout << "Você naufragou o cruzador inimigo!" << endl;
+				cout << "VocÃª naufragou o cruzador inimigo!" << endl;
 				break;
 			case 7:
-				cout << "Você naufragou o porta aviões inimigo!" << endl;
+				cout << "VocÃª naufragou o porta aviÃµes inimigo!" << endl;
 				break;
 			case 8:
-				cout << "Parabéns, você destruiu todos os navios inimigos!" << endl;
+				cout << "ParabÃ©ns, vocÃª destruiu todos os navios inimigos!" << endl;
 				break;
 			case 9:
-				cout << "Seus tiros acabaram, infelizmente você perdeu. Que Pena!" << endl;
+				cout << "Seus tiros acabaram, infelizmente vocÃª perdeu. Que Pena!" << endl;
 				break;
 			}
 			cout << "===============================================================" << endl;
 			if (event == 9);
 			else if (event == 8)
 			{
-				cout << "Você venceu com " << tiros << " tiros restantes!" << endl;
+				cout << "VocÃª venceu com " << tiros << " tiros restantes!" << endl;
 				cout << "===============================================================" << endl;
 			}
 			else
 			{
-				cout << "Você tem " << tiros << " tiros restantes." << endl;
+				cout << "VocÃª tem " << tiros << " tiros restantes." << endl;
 				cout << "===============================================================" << endl;
 			}
 		}
 		else
 		{
 			cout << "===============================================================" << endl;
-			cout << "Você tem " << tiros << " tiros restantes." << endl;
+			cout << "VocÃª tem " << tiros << " tiros restantes." << endl;
 			cout << "===============================================================" << endl;
 		}
 
-		//Lógica do jogo
+		//LÃ³gica do jogo
 
 		if (event == 8 || event == 9)
 		{
@@ -413,6 +413,11 @@ int main()
 		if (navios_restantes == 0) event = 8;
 
 	}
+	
+	for (int i = 0; i < CampoLargura; i++) delete Campo[i];
+	for (int i = 0; i < CampoLargura; i++) delete Navios[i];
+	delete Campo;
+	delete Navios;
 
 	return 0;
 }
